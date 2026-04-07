@@ -13,8 +13,8 @@ Fine-tune a pre-trained BERT transformer model to classify news headlines into t
 | Source         | Hugging Face Datasets (`ag_news`) |
 | Number of Classes | 4 |
 | Classes        | World, Sports, Business, Sci/Tech |
-| Number of Training Samples | 120,000 (we used subset for GPU efficiency) |
-| Number of Test Samples     | 7,600 (subset used for evaluation) |
+| Number of Training Samples | 120,000|
+| Number of Test Samples     | 7,600 |
 | Features       | `text` (headline), `label` |
 
 ---
@@ -24,7 +24,7 @@ Fine-tune a pre-trained BERT transformer model to classify news headlines into t
 1. Load the AG News dataset from Hugging Face.  
 2. Preprocess the text: tokenization using `BertTokenizer`.  
 3. Fine-tune pre-trained `bert-base-uncased` model for classification.  
-4. Train using Hugging Face `Trainer` API with small batch size to avoid GPU memory issues.  
+4. Train using Hugging Face `Trainer` API .  
 5. Evaluate using **Accuracy** and **Weighted F1-Score**.  
 6. Deploy the model using **Gradio** for live interaction.  
 
@@ -34,7 +34,7 @@ Fine-tune a pre-trained BERT transformer model to classify news headlines into t
 
 - Used **BERT (`bert-base-uncased`)** due to strong performance on NLP tasks.  
 - Subset of dataset used to **fit GPU memory**.  
-- Batch size = 4, 1 epoch, fp16 enabled → reduces memory usage.  
+- Batch size = 4, 1 epoch, fp16 enabled .  
 - Evaluation metrics: **Accuracy & F1-Score (weighted)**.  
 - Deployment: **Gradio** for interactive testing.  
 
@@ -44,8 +44,8 @@ Fine-tune a pre-trained BERT transformer model to classify news headlines into t
 
 | Metric          | Score |
 |-----------------|-------|
-| Accuracy        | 0.88 (example) |
-| F1-Score        | 0.87 (example) |
+| Accuracy        | 0.88  |
+| F1-Score        | 0.87  |
 
 **Observations:**
 - Class distribution is roughly balanced → model performs well.  
