@@ -63,10 +63,3 @@ News-Topic-Classifier-BERT/
 ├─ plots/ # Optional folder for boxplots, count plots
 
 ---
-
-## Setup & Run
-
-1. Clone the repo:
-```bash
-git clone https://github.com/<your-username>/News-Topic-Classifier-BERT.git
-cd News-Topic-Classifier-BERT
